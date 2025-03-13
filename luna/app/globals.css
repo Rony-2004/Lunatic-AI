@@ -151,3 +151,35 @@
   height: 100%;
   background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9));
 }
+.gradient-title {
+  background: linear-gradient(90deg, #d1d5db, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); 
+  font-weight: 800; 
+}
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  height: 100%; /* Ensures it occupies the full section height */
+  perspective: 1000px;
+  overflow: hidden; /* Prevents any scroll artifacts */
+}
+
+.hero-imge {
+  transform: rotateX(15deg) scale(1);
+  transition: transform 0.5s ease-out;
+  will-change: transform;
+  max-width: 100%; /* Ensures responsiveness */
+  height: auto; /* Maintains aspect ratio */
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
+.hero-imge.scrolled {
+  transform: rotateX(0deg) scale(1) translateY(40px);
+}
+
+.gradient {
+  background: linear-gradient(135deg, #8c89d2, #3b82f6);
+}
